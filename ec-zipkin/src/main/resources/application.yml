@@ -1,0 +1,11 @@
+server:
+  port: 18617
+spring:
+  application:
+    name : zipkin-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://127.0.0.1:18611/eureka/
+      

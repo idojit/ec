@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.7.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.zhiyun</groupId>
+	<artifactId>ec</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>ec</name>
+	<url>http://maven.apache.org</url>
+
+	<modules>
+		<module>ec-admin</module>
+		<module>ec-bus</module>
+		<module>ec-common</module>
+		<module>ec-config</module>
+		<module>ec-eureka</module>
+		<module>ec-frondend</module>
+		<module>ec-generator</module>
+		<module>ec-hystrix</module>
+		<module>ec-ribbon</module>
+		<module>ec-seckill</module>
+		<module>ec-sleuth</module>
+		<module>ec-ticket-api</module>
+		<module>ec-ticket-consume</module>
+		<module>ec-ticket-provider</module>
+		<module>ec-turbine</module>
+		<module>ec-user</module>
+		<module>ec-zipkin</module>
+		<module>ec-zuul</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<sleuth.version>2.0.0.RELEASE</sleuth.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Greenwich.SR2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth</artifactId>
+			<version>${sleuth.version}</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+	</dependencies>
+
+</project>
